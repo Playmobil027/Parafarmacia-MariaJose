@@ -248,9 +248,7 @@ export const business = {
     title: "Parafarmacia M. José Granero | El Genovés, Valencia",
     description:
       "Parafarmacia en El Genovés (Valencia): dermocosmética, cestas para bebé y Loterías y Apuestas del Estado. Atención cercana y personalizada.",
-    // Dominio placeholder (.example está reservado por RFC 2606 y nunca
-    // resuelve): sustitúyelo por el dominio real antes de desplegar.
-    siteUrl: "https://tu-dominio.example",
+    siteUrl: "https://parafarmaciamariajose.vercel.app",
     ogImage: "/images/hero.jpg",
     locale: "es_ES",
   },
