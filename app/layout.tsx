@@ -32,6 +32,9 @@ export const metadata: Metadata = {
     description: business.seo.description,
     images: [business.seo.ogImage],
   },
+  verification: {
+    google: "TuIiyV3rkWCbI8kFyIfVAIB_RWmr7qHUae236i5PKK0",
+  },
 };
 
 const localBusinessJsonLd = {
