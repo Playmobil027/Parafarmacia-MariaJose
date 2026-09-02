@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import type { NavLink } from "../business";
 
@@ -42,8 +43,15 @@ export function Navbar({
   return (
     <header className="border-b border-brand-200 bg-brand-50">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 lg:px-8">
-        <a href={logoHref} className="text-lg font-black tracking-tight">
-          {name}
+        <a href={logoHref} className="shrink-0 overflow-hidden rounded-lg">
+          <Image
+            src="/images/logo.png"
+            alt={name}
+            width={675}
+            height={196}
+            priority
+            className="h-10 w-auto"
+          />
         </a>
 
         <nav className="hidden items-center gap-8 md:flex">

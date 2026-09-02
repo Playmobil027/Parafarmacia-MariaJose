@@ -9,9 +9,11 @@
      etc.) generadas a partir de estas variables, en vez de usar clases
      sueltas de stone o emerald directamente.
 
-     Esta escala sale del azul real del logo (Logo tenda.jpg, promedio
-     #140f8d), no es un color inventado. Contraste verificado (WCAG AA)
-     para texto/fondo en todas las combinaciones que usan los componentes. */
+     brand-950 es el azul exacto del logo (promedio del fondo de
+     logo-original.jpg: #0d0889), usado como color de texto principal
+     (letras oscuras del sitio) y como fondo de botones/footer.
+     Contraste verificado (WCAG AAA, >14:1) para texto/fondo en todas
+     las combinaciones que usan los componentes. */
   --brand-50: #f3f3fc;
   --brand-100: #e7e8f8;
   --brand-200: #cdcfee;
@@ -20,7 +22,7 @@
   --brand-500: #3740be;
   --brand-600: #2226a0;
   --brand-800: #121268;
-  --brand-950: #0b0a43;
+  --brand-950: #0d0889;
 }
 
 @theme inline {
