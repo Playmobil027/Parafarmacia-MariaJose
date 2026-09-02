@@ -1,0 +1,89 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f8f7f4;
+  --foreground: #171717;
+
+  /* Paleta de marca: único lugar a editar para rebrandear el sitio.
+     Los componentes usan clases "brand-*" (bg-brand-950, text-brand-500,
+     etc.) generadas a partir de estas variables, en vez de usar clases
+     sueltas de stone o emerald directamente.
+
+     Esta escala sale del azul real del logo (Logo tenda.jpg, promedio
+     #140f8d), no es un color inventado. Contraste verificado (WCAG AA)
+     para texto/fondo en todas las combinaciones que usan los componentes. */
+  --brand-50: #f3f3fc;
+  --brand-100: #e7e8f8;
+  --brand-200: #cdcfee;
+  --brand-300: #acb0e2;
+  --brand-400: #7a7fcd;
+  --brand-500: #3740be;
+  --brand-600: #2226a0;
+  --brand-800: #121268;
+  --brand-950: #0b0a43;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-brand-50: var(--brand-50);
+  --color-brand-100: var(--brand-100);
+  --color-brand-200: var(--brand-200);
+  --color-brand-300: var(--brand-300);
+  --color-brand-400: var(--brand-400);
+  --color-brand-500: var(--brand-500);
+  --color-brand-600: var(--brand-600);
+  --color-brand-800: var(--brand-800);
+  --color-brand-950: var(--brand-950);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+/*
+  Estas reglas van dentro de @layer base para que las clases de utilidad
+  de Tailwind (text-white, text-brand-950, etc.) puedan sobreescribirlas.
+  CSS fuera de cualquier @layer tiene siempre prioridad sobre CSS dentro
+  de una layer, sea cual sea su especificidad — por eso, sin @layer base,
+  "a { color: inherit }" pisaba cualquier "text-white" puesto en un <a>
+  (los botones y el icono de WhatsApp salían invisibles).
+*/
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
+  body {
+    margin: 0;
+    background: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+/* Visible solo cuando recibe foco por teclado (enlace "saltar al contenido"). */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  left: 1rem;
+  top: 1rem;
+}
