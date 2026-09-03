@@ -89,3 +89,20 @@
   left: 1rem;
   top: 1rem;
 }
+
+/* Transición "fade + sube desde abajo" al entrar en el viewport (Reveal.tsx). */
+@media (prefers-reduced-motion: no-preference) {
+  .reveal {
+    opacity: 0;
+    transform: translateY(2.75rem);
+    transition:
+      opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+      transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, transform;
+  }
+
+  .reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

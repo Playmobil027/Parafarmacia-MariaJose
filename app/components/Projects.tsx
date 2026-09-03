@@ -1,5 +1,6 @@
 import Image from "next/image";
 import type { Project } from "../business";
+import { Reveal } from "./Reveal";
 
 type ProjectsProps = {
   eyebrow: string;
@@ -17,7 +18,7 @@ export function Projects({
   return (
     <section id="proyectos" className="bg-brand-100">
       <div className="mx-auto max-w-7xl px-6 py-20 lg:px-8 lg:py-28">
-        <div className="max-w-3xl">
+        <Reveal className="max-w-3xl">
           <p className="text-sm font-semibold uppercase tracking-[0.18em] text-brand-500">
             {eyebrow}
           </p>
@@ -29,12 +30,14 @@ export function Projects({
           <p className="mt-5 text-lg leading-8 text-brand-600">
             {description}
           </p>
-        </div>
+        </Reveal>
 
         <div className="mt-12 grid gap-6 md:grid-cols-2">
           {projects.map((project, index) => (
-            <article
+            <Reveal
               key={`${project.title}-${index}`}
+              as="article"
+              delay={(index % 2) * 120}
               className="overflow-hidden rounded-3xl bg-white shadow-sm"
             >
               <div className="relative h-[320px]">
@@ -58,7 +61,7 @@ export function Projects({
                   {project.description}
                 </p>
               </div>
-            </article>
+            </Reveal>
           ))}
         </div>
       </div>

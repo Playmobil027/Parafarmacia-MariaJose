@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Reveal } from "./Reveal";
 
 type HeroProps = {
   eyebrow: string;
@@ -27,7 +28,7 @@ export function Hero({
   return (
     <section className="mx-auto max-w-7xl px-6 py-20 lg:px-8 lg:py-28">
       <div className="grid gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
-        <div>
+        <Reveal>
           <span className="inline-flex rounded-full border border-brand-300 bg-white px-4 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-brand-600">
             {eyebrow}
           </span>
@@ -61,9 +62,12 @@ export function Hero({
               <span key={badge}>✓ {badge}</span>
             ))}
           </div>
-        </div>
+        </Reveal>
 
-        <div className="relative h-[360px] overflow-hidden rounded-[2rem] shadow-2xl sm:h-[440px] lg:h-[520px]">
+        <Reveal
+          delay={150}
+          className="relative h-[360px] overflow-hidden rounded-[2rem] shadow-2xl sm:h-[440px] lg:h-[520px]"
+        >
           <Image
             src={image.src}
             alt={image.alt}
@@ -84,7 +88,7 @@ export function Hero({
               {image.caption}
             </p>
           </div>
-        </div>
+        </Reveal>
       </div>
     </section>
   );

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { Reveal } from "./Reveal";
 
 type ContactFormProps = {
   eyebrow: string;
@@ -53,7 +54,7 @@ export function ContactForm({
   return (
     <section id="contacto" className="bg-brand-950 text-white">
       <div className="mx-auto grid max-w-7xl gap-12 px-6 py-20 lg:grid-cols-2 lg:px-8 lg:py-28">
-        <div>
+        <Reveal>
           <p className="text-sm font-semibold uppercase tracking-[0.18em] text-brand-400">
             {eyebrow}
           </p>
@@ -85,7 +86,7 @@ export function ContactForm({
               <p>{hours.afternoons}</p>
             </div>
           )}
-        </div>
+        </Reveal>
 
         {/*
           Demo: el envío usa mailto para funcionar sin backend. mailto no
