@@ -3,8 +3,11 @@
 import { useEffect, useRef, useState, type ReactNode } from "react";
 
 /**
- * Fires once, true after the element has entered the viewport. Shared by
- * Reveal and StaggerText so both use the exact same trigger behaviour.
+ * True while the element is in the viewport, false otherwise — keeps
+ * toggling for the element's whole lifetime (not just once), so content
+ * re-plays its entrance every time it scrolls into view and reverses back
+ * out when it scrolls past, in either scroll direction. Shared by Reveal
+ * and StaggerText so both use the exact same trigger behaviour.
  */
 export function useInView<T extends HTMLElement>() {
   const ref = useRef<T>(null);
@@ -18,12 +21,7 @@ export function useInView<T extends HTMLElement>() {
     }
 
     const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setVisible(true);
-          observer.unobserve(node);
-        }
-      },
+      ([entry]) => setVisible(entry.isIntersecting),
       { threshold: 0.15, rootMargin: "0px 0px -10% 0px" },
     );
 
@@ -52,9 +50,11 @@ type RevealProps = {
 const DISTANCE = "3.5rem";
 
 /**
- * Fades content into place the first time it enters the viewport (à la
- * canlis.com). No-ops to fully visible when the browser has no
- * IntersectionObserver or the user prefers reduced motion.
+ * Fades content into place whenever it scrolls into the viewport, and
+ * reverses back out whenever it scrolls back out — in both directions
+ * (à la canlis.com, but replaying every time rather than only once).
+ * No-ops to fully visible when the browser has no IntersectionObserver or
+ * the user prefers reduced motion.
  *
  * `direction`/`rotate` are opt-in: without them, the transform is driven
  * entirely by the `.reveal` CSS class (unchanged behaviour). Passing either

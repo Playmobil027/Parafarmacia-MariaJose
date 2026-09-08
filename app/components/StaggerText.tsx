@@ -9,11 +9,12 @@ type StaggerTextProps = {
 };
 
 /**
- * Reveals text word by word as it enters the viewport, each word masked
- * and sliding up into place with a short stagger. Falls back to plain
- * static text when the user prefers reduced motion (see .stagger-word
- * in globals.css, which only defines the hidden/animated state inside
- * the no-preference media query).
+ * Reveals text word by word whenever it scrolls into view, each word
+ * masked and sliding up into place with a short stagger — and slides
+ * back out again when it scrolls out, replaying every time. Falls back
+ * to plain static text when the user prefers reduced motion (see
+ * .stagger-word in globals.css, which only defines the hidden/animated
+ * state inside the no-preference media query).
  */
 export function StaggerText({ text, className = "", as = "h1" }: StaggerTextProps) {
   const Tag = as;
