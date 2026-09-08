@@ -7,7 +7,7 @@ type TrustBadgesProps = {
 
 export function TrustBadges({ badges }: TrustBadgesProps) {
   return (
-    <section className="border-y border-brand-200 bg-white">
+    <section data-nav-theme="light" className="border-y border-brand-200 bg-white">
       <div className="mx-auto grid max-w-7xl gap-8 px-6 py-10 md:grid-cols-3 lg:px-8">
         {badges.map((badge, index) => (
           <Reveal key={badge.title} delay={(index % 3) * 100}>

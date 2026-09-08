@@ -2,6 +2,7 @@ import { business } from "./business";
 import { Navbar } from "./components/Navbar";
 import { Hero } from "./components/Hero";
 import { TrustBadges } from "./components/TrustBadges";
+import { Marquee } from "./components/Marquee";
 import { Services } from "./components/Services";
 import { Projects } from "./components/Projects";
 import { Process } from "./components/Process";
@@ -34,6 +35,8 @@ export default function Home() {
         />
 
         <TrustBadges badges={business.trustBadges} />
+
+        <Marquee items={business.marqueeItems} />
 
         <Services
           eyebrow={business.servicesIntro.eyebrow}
@@ -72,7 +75,11 @@ export default function Home() {
         />
       </main>
 
-      <Footer copyright={business.footer.copyright} line={business.footer.line} />
+      <Footer
+        name={business.name}
+        copyright={business.footer.copyright}
+        line={business.footer.line}
+      />
 
       <WhatsAppButton
         phone={business.contact.whatsapp}

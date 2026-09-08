@@ -52,7 +52,7 @@ export function ContactForm({
   const [submitted, setSubmitted] = useState(false);
 
   return (
-    <section id="contacto" className="bg-brand-950 text-white">
+    <section id="contacto" data-nav-theme="dark" className="bg-brand-950 text-white">
       <div className="mx-auto grid max-w-7xl gap-12 px-6 py-20 lg:grid-cols-2 lg:px-8 lg:py-28">
         <Reveal>
           <p className="text-sm font-semibold uppercase tracking-[0.18em] text-brand-400">
@@ -165,7 +165,7 @@ export function ContactForm({
 
             <button
               type="submit"
-              className="rounded-full bg-brand-950 px-6 py-4 font-semibold text-white transition hover:bg-brand-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+              className="rounded-full bg-brand-950 px-6 py-4 font-semibold text-white transition duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] hover:scale-[1.02] hover:bg-brand-800 hover:shadow-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
             >
               {submitLabel}
             </button>

@@ -9,7 +9,7 @@ type ProcessProps = {
 
 export function Process({ eyebrow, title, steps }: ProcessProps) {
   return (
-    <section id="proceso" className="bg-white">
+    <section id="proceso" data-nav-theme="light" className="bg-white">
       <div className="mx-auto max-w-7xl px-6 py-20 lg:px-8 lg:py-28">
         <Reveal className="max-w-3xl">
           <p className="text-sm font-semibold uppercase tracking-[0.18em] text-brand-500">
@@ -25,10 +25,11 @@ export function Process({ eyebrow, title, steps }: ProcessProps) {
           {steps.map((item, index) => (
             <Reveal
               key={item.step}
-              delay={(index % 3) * 100}
-              className="border-t-2 border-brand-950 pt-6"
+              delay={(index % 3) * 120}
+              direction={index % 2 === 0 ? "left" : "right"}
+              className="group border-t-2 border-brand-950 pt-6 transition-colors duration-300"
             >
-              <p className="text-sm font-bold uppercase tracking-widest text-brand-500">
+              <p className="text-sm font-bold uppercase tracking-widest text-brand-500 transition-colors duration-300 group-hover:text-brand-950">
                 {item.step}
               </p>
 

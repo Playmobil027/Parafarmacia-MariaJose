@@ -91,6 +91,14 @@ export const business = {
     caption: "Cerca de ti, con el consejo de siempre.",
   },
 
+  marqueeItems: [
+    "Dermocosmética",
+    "Cestas para bebé",
+    "Loterías y Apuestas del Estado",
+    "Atención cercana",
+    "Asesoramiento profesional",
+  ],
+
   trustBadges: [
     {
       title: "Atención cercana",
