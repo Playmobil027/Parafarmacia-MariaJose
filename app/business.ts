@@ -390,6 +390,35 @@ export const business = {
         },
       ],
     },
+    {
+      image: "/images/productos/cestas-regalo.jpg",
+      alt: "Cesta de regalo con lazo azul y productos Weleda para hombre",
+      title: "Cestas de regalo",
+      description:
+        "Preparamos cestas de regalo personalizadas para cualquier ocasión, con los productos que elijas.",
+      gallery: [
+        {
+          image: "/images/productos/cestas-regalo-2.jpg",
+          alt: "Cesta de regalo para bebé personalizada con el nombre Greta",
+        },
+        {
+          image: "/images/productos/cestas-regalo-3.jpg",
+          alt: "Cesta de regalo navideña con productos Mussvital Botanics",
+        },
+        {
+          image: "/images/productos/cestas-regalo-4.jpg",
+          alt: "Cesta de regalo para bebé con productos Chicco Natural Sensation",
+        },
+        {
+          image: "/images/productos/cestas-regalo-5.jpg",
+          alt: "Cesta de regalo para bebé con mochila y productos Mustela",
+        },
+        {
+          image: "/images/productos/cestas-regalo-6.jpg",
+          alt: "Cesta de regalo navideña con cosmética natural y bisutería",
+        },
+      ],
+    },
   ] satisfies ProductCategory[],
 
   bettingIntro: {
