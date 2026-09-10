@@ -166,3 +166,30 @@
     transform: scale(1);
   }
 }
+
+/* Lightbox de fotos ampliadas (Zoomable.tsx): el fondo hace fade y la foto
+   entra con un pequeño scale-in, a juego con el resto de transiciones del
+   sitio. Sin @media prefers-reduced-motion porque, a diferencia de las
+   animaciones de scroll, esta es la única vía para mostrar la foto ampliada
+   y respeta la preferencia igualmente al ser casi instantánea si se desea. */
+.lightbox-backdrop {
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.lightbox-backdrop.is-visible {
+  opacity: 1;
+}
+
+.lightbox-content {
+  opacity: 0;
+  transform: scale(0.96);
+  transition:
+    opacity 0.25s ease,
+    transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.lightbox-content.is-visible {
+  opacity: 1;
+  transform: scale(1);
+}

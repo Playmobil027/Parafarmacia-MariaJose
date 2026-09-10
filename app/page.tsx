@@ -6,6 +6,8 @@ import { Marquee } from "./components/Marquee";
 import { Services } from "./components/Services";
 import { Projects } from "./components/Projects";
 import { Process } from "./components/Process";
+import { Products } from "./components/Products";
+import { Betting } from "./components/Betting";
 import { ContactForm } from "./components/ContactForm";
 import { WhatsAppButton } from "./components/WhatsAppButton";
 import { Footer } from "./components/Footer";
@@ -55,6 +57,20 @@ export default function Home() {
           eyebrow={business.processIntro.eyebrow}
           title={business.processIntro.title}
           steps={business.process}
+        />
+
+        <Products
+          eyebrow={business.productsIntro.eyebrow}
+          title={business.productsIntro.title}
+          categories={business.products}
+        />
+
+        <Betting
+          eyebrow={business.bettingIntro.eyebrow}
+          title={business.bettingIntro.title}
+          description={business.bettingIntro.description}
+          image={business.bettingImage}
+          games={business.bettingGames}
         />
 
         <ContactForm
