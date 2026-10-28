@@ -1,0 +1,450 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Parafarmacia M. José Granero · El Genovés</title>
+<meta name="description" content="Parafarmacia en El Genovés (Valencia): dermocosmética, bebé, herbolario, gafas, perfumería, cestas de regalo a medida y punto de Loterías y Apuestas del Estado. Avenida de Gandia, 36.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500;600;700&family=Anybody:wdth,wght@50..150,300..900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ultramar:#0E078B;      /* azul del logo */
+  --ultramar-2:#1B15B8;
+  --rotulo:#1F62AE;        /* azul del zócalo de la fachada */
+  --celofan:#D6E6F6;       /* celofán de las cestas */
+  --papel:#F4F6FB;
+  --tinta:#0B0A33;
+  --lazo:#D8402F;          /* lazo de las cestas */
+  --blanco:#fff;
+  --f-display:"Anybody","Arial Narrow",sans-serif;
+  --f-text:"Albert Sans",system-ui,sans-serif;
+  --gut:clamp(16px,4vw,48px);
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:auto;-webkit-text-size-adjust:100%}
+body{font-family:var(--f-text);font-size:17px;line-height:1.55;color:var(--tinta);background:var(--papel);padding-bottom:76px;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--lazo);outline-offset:3px}
+.wrap{padding-inline:var(--gut);max-width:1320px;margin-inline:auto}
+.disp{font-family:var(--f-display);font-weight:800;font-variation-settings:"wdth" 125;line-height:.95;letter-spacing:-.01em}
+
+/* botones */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.6em;min-height:50px;padding:.75em 1.4em;font:700 1rem/1.1 var(--f-text);text-decoration:none;border:2px solid var(--ultramar);background:var(--ultramar);color:#fff;border-radius:4px;cursor:pointer;transition:transform .15s,background .15s}
+.btn:hover{transform:translateY(-2px);background:var(--ultramar-2)}
+.btn.ghost{background:transparent;color:var(--ultramar)}
+.btn.ghost:hover{background:var(--ultramar);color:#fff}
+.btn.wa{background:#128C4A;border-color:#128C4A}
+.btn.wa:hover{background:#0f7a40}
+.btn.light{background:#fff;color:var(--ultramar);border-color:#fff}
+.btn.lightghost{background:transparent;color:#fff;border-color:#fff}
+.btn svg{width:20px;height:20px;flex:none}
+
+/* editables */
+.edit{}
+body.ver-editables .edit{background:#fff36b;outline:2px dashed #b38b00;outline-offset:2px;color:#000}
+
+/* cabecera */
+header.top{position:sticky;top:0;z-index:30;background:var(--papel);border-bottom:2px solid var(--ultramar)}
+header.top .wrap{display:flex;align-items:center;gap:16px;min-height:64px}
+header.top .logo img{height:42px;width:auto}
+header.top nav{margin-left:auto;display:none;gap:28px;font-weight:600}
+header.top nav a{text-decoration:none}
+header.top nav a:hover{text-decoration:underline;text-underline-offset:5px}
+header.top .btn{margin-left:auto;min-height:42px;padding:.5em 1em;font-size:.95rem}
+@media(min-width:900px){header.top nav{display:flex}header.top .btn{margin-left:0}}
+
+/* hero: la esquina */
+.hero{padding-top:clamp(24px,4vw,52px);position:relative;z-index:2}
+.hero .wrap{display:grid;gap:24px;grid-template-columns:minmax(0,1fr)}
+.estado{display:inline-flex;align-items:center;gap:10px;font-weight:700;font-size:.95rem;background:#fff;border:2px solid var(--tinta);padding:.35em .9em .35em .7em;border-radius:99px;width:fit-content}
+.estado i{width:12px;height:12px;border-radius:50%;background:#999;flex:none}
+.estado.on i{background:#17a34a;box-shadow:0 0 0 4px #17a34a33}
+.estado.off i{background:var(--lazo)}
+.rotulo{display:flex;align-items:center;gap:.28em;background:var(--ultramar);color:#fff;width:fit-content;max-width:100%;padding:.16em .3em .16em .36em;border-radius:6px;font-size:clamp(1.4rem,7.7vw,6.2rem)}
+.rotulo h1{font:inherit;font-variation-settings:"wdth" 115;letter-spacing:0}
+.rotulo svg{width:1em;height:1em;flex:none;background:#fff;border-radius:.2em;color:var(--ultramar);padding:.12em}
+.hero .txt{display:grid;gap:20px;align-content:start}
+.hero p.lede{font-size:clamp(1.15rem,2.4vw,1.55rem);line-height:1.4;max-width:30ch}
+.hero p.lede strong{color:var(--ultramar)}
+.hero .acciones{display:flex;flex-wrap:wrap;gap:12px}
+.hero figure{position:relative;margin:0 calc(var(--gut)*-1)}
+.hero figure img{width:100%;aspect-ratio:16/11;object-fit:cover;object-position:78% 50%;border-block:6px solid var(--tinta)}
+.hero figcaption{position:absolute;left:var(--gut);bottom:-14px;background:var(--lazo);color:#fff;font-weight:700;font-size:.85rem;padding:.3em .8em;transform:rotate(-2deg)}
+.zocalo{background:var(--rotulo);color:#fff;margin-top:-40px;padding:64px 0 34px;position:relative;z-index:1}
+.hechos{display:grid;gap:14px 28px;font-size:.98rem}
+.hechos b{display:block;font-family:var(--f-display);font-variation-settings:"wdth" 110;font-weight:700;font-size:1.05rem}
+@media(min-width:560px){.hechos{grid-template-columns:1fr 1fr}}
+@media(min-width:900px){
+  .hero .wrap{grid-template-columns:.8fr 1.2fr;column-gap:56px;align-items:start}
+  .hero .estado,.hero .rotulo{grid-column:1/-1}
+  .hero .txt{grid-column:1;padding-top:12px}
+  .hero figure{grid-column:2;margin:0;margin-bottom:-90px}
+  .hero figure img{aspect-ratio:3/2;border:6px solid var(--tinta)}
+  .zocalo{margin-top:0;padding:40px 0 40px}
+  .zocalo{min-height:200px}
+  .hechos{grid-template-columns:1fr 1fr;width:calc((100% - 56px)*.4)}
+}
+
+/* etiquetas de cesta */
+.tag{--c:#fff;position:relative;display:inline-block;background:var(--c);color:var(--tinta);padding:.7em 1em .7em 2.1em;font-weight:700;line-height:1.2;clip-path:polygon(0 50%,18px 0,100% 0,100% 100%,18px 100%);filter:drop-shadow(0 0 0 #000)}
+.tag::before{content:"";position:absolute;left:12px;top:50%;width:9px;height:9px;margin-top:-4.5px;border-radius:50%;background:var(--papel);box-shadow:inset 0 0 0 2px var(--tinta)}
+.tag small{display:block;font-weight:500;font-size:.8rem;opacity:.75}
+.tag.red{--c:var(--lazo);color:#fff}
+.paso .tag.red b{color:#fff}
+.tag.red::before{box-shadow:inset 0 0 0 2px #fff;background:var(--lazo)}
+.tag.blue{--c:var(--celofan)}
+
+/* cestas */
+.cestas{padding:clamp(64px,10vw,130px) 0 clamp(56px,8vw,110px)}
+.cestas h2{font-size:clamp(2.2rem,7.4vw,5rem);max-width:12ch;color:var(--ultramar)}
+.cestas .intro{display:grid;gap:22px;margin-bottom:44px}
+.cestas .intro p{max-width:40ch;font-size:1.15rem}
+@media(min-width:900px){.cestas .intro{grid-template-columns:1.3fr .7fr;align-items:end}}
+.grid-cestas{display:grid;grid-template-columns:1fr 1fr;gap:34px 14px}
+.cesta{position:relative}
+.cesta img{width:100%;aspect-ratio:3/4;object-fit:cover;background:var(--celofan)}
+.cesta .tag{position:absolute;left:-6px;bottom:-16px;font-size:.88rem;max-width:92%}
+.cesta:nth-child(even){margin-top:44px}
+@media(min-width:900px){
+  .grid-cestas{grid-template-columns:repeat(5,1fr);gap:18px}
+  .cesta:nth-child(even){margin-top:0}
+  .cesta:nth-child(1){margin-top:56px}
+  .cesta:nth-child(2){margin-top:0}
+  .cesta:nth-child(3){margin-top:84px}
+  .cesta:nth-child(4){margin-top:20px}
+  .cesta:nth-child(5){margin-top:110px}
+  .cesta .tag{font-size:.95rem}
+}
+.cestas .cta{margin-top:70px;display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+.cestas .cta span{max-width:36ch;font-size:.98rem}
+
+/* pasillos */
+.pasillos{background:var(--celofan);padding:clamp(56px,8vw,110px) 0;border-block:2px solid var(--tinta)}
+.pasillos .cab{display:grid;gap:12px;margin-bottom:36px}
+.pasillos h2{font-size:clamp(2rem,6vw,4rem);color:var(--tinta)}
+.pasillos .cab p{max-width:46ch}
+.lista{list-style:none;padding:0}
+.lista li{display:grid;grid-template-columns:1fr 84px;gap:16px;align-items:center;padding:18px 0;border-top:2px solid var(--tinta)}
+.lista li:last-child{border-bottom:2px solid var(--tinta)}
+.lista h3{font-family:var(--f-display);font-weight:800;font-variation-settings:"wdth" 110;font-size:clamp(1.5rem,5.2vw,3.1rem);line-height:1;color:var(--ultramar)}
+.lista p{margin-top:6px;font-size:.98rem;max-width:44ch}
+.lista img{width:84px;height:84px;object-fit:cover;border-radius:50% 50% 6px 6px;border:2px solid var(--tinta);transition:transform .25s}
+.lista li:hover img{transform:rotate(-4deg) scale(1.08)}
+.lista li:nth-child(even) img{border-radius:6px 6px 50% 50%}
+@media(min-width:900px){
+  .lista li{grid-template-columns:1.1fr 1fr 240px;padding:24px 0}
+  .lista p{margin:0}
+  .lista img{width:240px;height:120px;border-radius:120px 120px 6px 6px}
+  .lista li:nth-child(even) img{border-radius:6px 6px 120px 120px}
+  .lista li:nth-child(odd){padding-left:0}
+  .lista li:nth-child(even){padding-left:clamp(0px,6vw,90px)}
+}
+
+/* encargos */
+.encargos{padding:clamp(64px,9vw,120px) 0;position:relative}
+.encargos h2{font-size:clamp(2rem,6.4vw,4.4rem);max-width:14ch}
+.encargos .sub{max-width:44ch;margin-top:16px;font-size:1.12rem}
+.cuerda{position:relative;margin-top:56px;display:grid;gap:26px;padding-top:26px}
+.cuerda::before{content:"";position:absolute;left:0;right:0;top:0;height:2px;background:var(--tinta)}
+.paso{position:relative;margin-left:22px}
+.paso::before{content:"";position:absolute;left:30px;top:-26px;height:26px;width:2px;background:var(--tinta);display:none}
+.paso .tag{display:block;padding:1.1em 1.2em 1.1em 2.3em;font-size:1.05rem}
+.paso .tag b{display:block;font-family:var(--f-display);font-variation-settings:"wdth" 110;font-size:1.5rem;font-weight:800;line-height:1.05;color:var(--ultramar);margin-bottom:.3em}
+.paso .tag span{font-weight:500}
+@media(min-width:900px){
+  .cuerda{grid-template-columns:repeat(3,1fr);gap:22px}
+  .paso{margin-left:0}
+  .paso:nth-child(2){margin-top:34px}
+  .paso:nth-child(3){margin-top:12px}
+  .paso::before{display:block;left:50px;top:-26px}
+  .paso:nth-child(2)::before{top:-60px;height:60px}
+  .paso:nth-child(3)::before{top:-38px;height:38px}
+}
+
+/* lotería */
+.loteria{background:var(--ultramar);color:#fff;padding:clamp(56px,8vw,110px) 0;overflow:hidden}
+.loteria .wrap{display:grid;gap:36px;align-items:center}
+.loteria figure{margin:0;position:relative;max-width:360px}
+.loteria figure img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:top;border:4px solid #fff;transform:rotate(-2.5deg)}
+.loteria h2{font-size:clamp(2rem,6.4vw,4.4rem);max-width:11ch}
+.loteria p{max-width:44ch;margin-top:14px;font-size:1.1rem}
+.juegos{display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0;margin:26px 0 0}
+.juegos li{border:2px solid #fff;border-radius:99px;padding:.3em .95em;font-weight:600;font-size:.95rem}
+.loteria .aviso{font-size:.85rem;opacity:.8;margin-top:22px}
+@media(min-width:900px){.loteria .wrap{grid-template-columns:.8fr 1.2fr;gap:90px}.loteria figure{justify-self:center}}
+
+/* galería */
+.galeria{padding:clamp(56px,8vw,110px) 0}
+.galeria .cab{display:flex;flex-wrap:wrap;gap:18px 40px;align-items:end;justify-content:space-between;margin-bottom:32px}
+.galeria h2{font-size:clamp(2rem,6vw,4rem);color:var(--ultramar);max-width:12ch}
+.collage{display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:clamp(70px,13vw,150px);gap:10px}
+.collage img{width:100%;height:100%;object-fit:cover;border:2px solid var(--tinta)}
+.collage img:nth-child(1){grid-column:1/5;grid-row:1/4;object-position:50% 90%}
+.collage img:nth-child(2){grid-column:5/7;grid-row:1/3}
+.collage img:nth-child(3){grid-column:5/7;grid-row:3/5}
+.collage img:nth-child(4){grid-column:1/3;grid-row:4/6}
+.collage img:nth-child(5){grid-column:3/5;grid-row:4/6}
+.collage img:nth-child(6){grid-column:5/7;grid-row:5/7}
+.collage img:nth-child(7){grid-column:1/5;grid-row:6/7}
+
+/* dónde */
+.donde{background:var(--tinta);color:#fff;padding:clamp(56px,8vw,110px) 0}
+.donde .wrap{display:grid;gap:36px}
+.donde h2{font-size:clamp(2rem,7vw,3.8rem)}
+.donde h2 small{display:block;font-family:var(--f-text);font-weight:600;font-size:clamp(1rem,2.4vw,1.3rem);font-variation-settings:normal;margin-top:14px;color:var(--celofan);letter-spacing:0;line-height:1.3}
+.horas{border-collapse:collapse;width:100%;max-width:440px;margin-top:6px}
+.horas th,.horas td{text-align:left;padding:9px 12px;border-bottom:1px solid #ffffff33;font-weight:500}
+.horas th{font-weight:700;width:38%}
+.horas tr.hoy{background:#fff;color:var(--tinta)}
+.horas tr.hoy th::after{content:" · hoy";font-weight:500}
+.donde .estado{margin-bottom:16px;border-color:#fff;color:var(--tinta)}
+.donde .acc{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.mapa{border:4px solid #fff;min-height:320px;background:#223}
+.mapa iframe{width:100%;height:100%;min-height:320px;border:0;display:block}
+@media(min-width:900px){.donde .wrap{grid-template-columns:1fr 1fr;gap:64px;align-items:start}.mapa{grid-column:2;grid-row:1/3;min-height:480px}}
+
+/* pie */
+footer{padding:36px 0 28px;font-size:.92rem}
+footer .wrap{display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:space-between;align-items:center}
+footer nav{display:flex;flex-wrap:wrap;gap:8px 20px}
+footer a{text-underline-offset:3px}
+
+/* franja dueño */
+.dueno{background:#fff36b;color:#222;border-top:6px dashed #222;padding:40px 0 56px}
+.dueno .aviso{font-weight:800;font-size:.85rem;background:#222;color:#fff36b;display:inline-block;padding:.25em .7em;margin-bottom:18px}
+.dueno h2{font-family:var(--f-display);font-variation-settings:"wdth" 110;font-size:clamp(1.6rem,5vw,2.6rem);margin-bottom:18px}
+.dueno ul{display:grid;gap:12px;padding-left:1.2em;max-width:70ch}
+.dueno .btn{margin-top:26px;background:#222;border-color:#222}
+
+/* barra móvil */
+.barra{position:fixed;left:0;right:0;bottom:0;z-index:40;display:grid;grid-template-columns:1fr 1.4fr;gap:8px;padding:8px 10px calc(8px + env(safe-area-inset-bottom));background:var(--papel);border-top:2px solid var(--ultramar)}
+.barra .btn{min-height:48px;padding:.5em .6em}
+@media(min-width:900px){.barra{display:none}body{padding-bottom:0}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#"><img src="img/logo.png" alt="Parafarmacia M. José Granero" width="145" height="42"></a>
+    <nav aria-label="Principal">
+      <a href="#cestas">Cestas</a>
+      <a href="#pasillos">Productos</a>
+      <a href="#encargos">Encargos</a>
+      <a href="#loteria">Lotería</a>
+      <a href="#donde">Horario</a>
+    </nav>
+    <a class="btn wa" href="https://wa.me/34605843571?text=Hola%2C%20quer%C3%ADa%20consultar%20una%20cosa%20de%20la%20parafarmacia." data-wa>Escribir por WhatsApp</a>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="wrap">
+    <div class="estado" id="estado1" role="status"><i></i><span>Comprobando horario…</span></div>
+    <div class="rotulo disp">
+      <h1>PARAFARMACIA</h1>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M9 3h6v6h6v6h-6v6H9v-6H3V9h6z"/></svg>
+    </div>
+    <div class="txt">
+      <p class="lede">En la esquina de la Avenida de Gandia, en El Genovés. Piel, bebé, herbolario, gafas y perfumes. <strong>Si no lo tenemos, te lo encargamos.</strong></p>
+      <div class="acciones">
+        <a class="btn" href="tel:+34962229228">Llamar al 962 22 92 28</a>
+        <a class="btn ghost" href="#cestas">Ver las cestas</a>
+      </div>
+    </div>
+    <figure>
+      <img src="img/hero.jpg" alt="Fachada de la parafarmacia en la esquina de la Avenida de Gandia, con el zócalo azul" width="1100" height="619" fetchpriority="high">
+      <figcaption>Av. de Gandia, 36</figcaption>
+    </figure>
+  </div>
+</section>
+<div class="zocalo">
+  <div class="wrap">
+    <div class="hechos">
+      <div><b>Cestas a medida</b>Para nacimientos, bautizos y Navidad</div>
+      <div><b>Encargos</b>Cualquier producto, te avisamos al llegar</div>
+      <div><b>Lotería y apuestas</b>Punto oficial en la misma tienda</div>
+      <div><b>+550 en Facebook</b>La parafarmacia de Genovés</div>
+    </div>
+  </div>
+</div>
+
+<section class="cestas" id="cestas">
+  <div class="wrap">
+    <div class="intro">
+      <h2 class="disp">Cestas hechas a tu medida</h2>
+      <p>Para un nacimiento, un bautizo, Navidad o un cumpleaños. Tú eliges qué lleva y la preparamos en la tienda, con lazo y con el nombre si hace falta.</p>
+    </div>
+    <div class="grid-cestas">
+      <div class="cesta"><img src="img/productos-cestas-regalo.jpg" alt="Cesta de regalo con lazo azul y productos Weleda para hombre" loading="lazy"><span class="tag blue">Con lazo azul<small>Cuidado para él</small></span></div>
+      <div class="cesta"><img src="img/productos-cestas-regalo-2.jpg" alt="Cesta de regalo para bebé con el nombre Greta bordado" loading="lazy"><span class="tag red">Para Greta<small>Nacimiento</small></span></div>
+      <div class="cesta"><img src="img/productos-cestas-regalo-3.jpg" alt="Cesta navideña con productos Mussvital" loading="lazy"><span class="tag">Navidad<small>Cosmética natural</small></span></div>
+      <div class="cesta"><img src="img/productos-cestas-regalo-5.jpg" alt="Cesta de bebé con mochila y productos Mustela" loading="lazy"><span class="tag blue">Con mochila<small>Mustela para el bebé</small></span></div>
+      <div class="cesta"><img src="img/productos-cestas-regalo-6.jpg" alt="Cesta navideña con cosmética natural y bisutería" loading="lazy"><span class="tag red">Con detalle<small>Cosmética y bisutería</small></span></div>
+    </div>
+    <div class="cta">
+      <a class="btn wa" href="https://wa.me/34605843571?text=Hola%2C%20me%20gustar%C3%ADa%20encargar%20una%20cesta%20de%20regalo." data-wa>Encargar una cesta por WhatsApp</a>
+      <span>Cuéntanos para quién es y qué quieres que lleve. Sin precios cerrados: depende de lo que elijas.</span>
+    </div>
+  </div>
+</section>
+
+<section class="pasillos" id="pasillos">
+  <div class="wrap">
+    <div class="cab">
+      <h2 class="disp">Lo que hay en las estanterías</h2>
+      <p>Un poco de todo para la familia. Algunas de las marcas que verás al entrar: Bella Aurora, Chicco, Mustela, Weleda, Mussvital y Acorvisión.</p>
+    </div>
+    <ul class="lista">
+      <li><div><h3>Dermocosmética</h3><p>Cremas y tratamientos para la cara y el cuerpo.</p></div><img src="img/dermocosmetica.jpg" alt="Estantería de dermocosmética Bella Aurora" loading="lazy"></li>
+      <li><div><h3>Bebé</h3><p>Chupetes, biberones, juguetes y cuidado diario.</p></div><img src="img/bebes.jpg" alt="Estantería con juguetes y productos Chicco" loading="lazy"></li>
+      <li><div><h3>Herbolario e infusiones</h3><p>Tés, infusiones, especias y productos ecológicos.</p></div><img src="img/productos-alimentacion-2.jpg" alt="Estantería de infusiones y tés" loading="lazy"></li>
+      <li><div><h3>Perfumería</h3><p>Fragancias y colonias para toda la familia.</p></div><img src="img/productos-perfumes-3.jpg" alt="Expositor de perfumería" loading="lazy"></li>
+      <li><div><h3>Higiene y cabello</h3><p>Geles, jabones, aceites y tratamientos capilares.</p></div><img src="img/productos-cuidado-capilar.jpg" alt="Aceites de argán y keratina para el cabello" loading="lazy"></li>
+      <li><div><h3>Suplementos</h3><p>Magnesio, própolis, vitaminas y colágeno.</p></div><img src="img/productos-suplementos.jpg" alt="Suplementos naturales de magnesio" loading="lazy"></li>
+      <li><div><h3>Gafas y bisutería</h3><p>Gafas de sol y graduadas, y complementos.</p></div><img src="img/productos-gafas-3.jpg" alt="Gafas de sol y bisutería" loading="lazy"></li>
+    </ul>
+  </div>
+</section>
+
+<section class="encargos" id="encargos">
+  <div class="wrap">
+    <h2 class="disp">¿No lo tenemos? Lo encargamos.</h2>
+    <p class="sub">Pide cualquier producto de parafarmacia, aunque no lo veas en la tienda.</p>
+    <div class="cuerda">
+      <div class="paso"><span class="tag"><b>Cuéntanos qué buscas</b><span>En la tienda, por teléfono o por WhatsApp.</span></span></div>
+      <div class="paso"><span class="tag blue"><b>Lo encargamos</b><span>Lo pedimos y lo apuntamos a tu nombre.</span></span></div>
+      <div class="paso"><span class="tag red"><b>Te avisamos</b><span>Cuando llega, pasas a recogerlo.</span></span></div>
+    </div>
+    <div style="margin-top:44px"><a class="btn wa" href="https://wa.me/34605843571?text=Hola%2C%20quer%C3%ADa%20encargar%20un%20producto." data-wa>Encargar un producto</a></div>
+  </div>
+</section>
+
+<section class="loteria" id="loteria">
+  <div class="wrap">
+    <figure><img src="img/apuestas.jpg" alt="Panel de Loterías y Apuestas del Estado con los botes de cada juego" loading="lazy"></figure>
+    <div>
+      <h2 class="disp">Y de paso, la lotería</h2>
+      <p>La parafarmacia es también punto de venta de Loterías y Apuestas del Estado. Pasa a jugar cuando vengas a por lo tuyo.</p>
+      <ul class="juegos">
+        <li>Lotería Nacional</li><li>La Primitiva</li><li>Bonoloto</li><li>Euromillones</li><li>El Gordo de la Primitiva</li><li>Quiniela</li><li>Quinigol</li><li>EuroDreams</li>
+      </ul>
+      <p class="aviso">Juega con responsabilidad. Prohibido a menores de 18 años.</p>
+    </div>
+  </div>
+</section>
+
+<section class="galeria" id="galeria">
+  <div class="wrap">
+    <div class="cab">
+      <h2 class="disp">Así es por dentro</h2>
+      <a class="btn ghost edit" href="https://www.facebook.com/search/top?q=Parafarmacia%20Maria%20Jos%C3%A9%20Granero%20Genov%C3%A9s" target="_blank" rel="noopener">Síguenos en Facebook</a>
+    </div>
+    <div class="collage">
+      <img src="img/fachada.jpg" alt="Escaparate de la parafarmacia" loading="lazy">
+      <img src="img/interior.jpg" alt="Interior de la tienda" loading="lazy">
+      <img src="img/productos-higiene.jpg" alt="Expositor de jabones" loading="lazy">
+      <img src="img/productos-alimentacion-4.jpg" alt="Expositor de productos ecológicos" loading="lazy">
+      <img src="img/productos-bebes-3.jpg" alt="Productos para bebé" loading="lazy">
+      <img src="img/productos-cuidado-piel.jpg" alt="Cremas y lociones" loading="lazy">
+      <img src="img/productos-perfumes.jpg" alt="Estantería de perfumes" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<section class="donde" id="donde">
+  <div class="wrap">
+    <div>
+      <div class="estado" id="estado2" role="status"><i></i><span>Comprobando horario…</span></div>
+      <h2 class="disp">Avenida de Gandia, 36<small>46894 El Genovés (Valencia) · 962 22 92 28</small></h2>
+      <table class="horas edit" aria-label="Horario">
+        <tbody>
+          <tr data-d="1"><th>Lunes</th><td>9:00–14:00 y 17:00–20:00</td></tr>
+          <tr data-d="2"><th>Martes</th><td>9:00–14:00 y 17:00–20:00</td></tr>
+          <tr data-d="3"><th>Miércoles</th><td>9:00–14:00 y 17:00–20:00</td></tr>
+          <tr data-d="4"><th>Jueves</th><td>9:00–14:00 y 17:00–20:00</td></tr>
+          <tr data-d="5"><th>Viernes</th><td>9:00–14:00 y 17:00–20:00</td></tr>
+          <tr data-d="6"><th>Sábado</th><td>9:00–14:00</td></tr>
+          <tr data-d="0"><th>Domingo</th><td>Cerrado</td></tr>
+        </tbody>
+      </table>
+      <div class="acc">
+        <a class="btn wa" href="https://wa.me/34605843571?text=Hola%2C%20quer%C3%ADa%20consultar%20una%20cosa%20de%20la%20parafarmacia." data-wa>Escribir por WhatsApp</a>
+        <a class="btn lightghost" href="tel:+34962229228">Llamar</a>
+      </div>
+    </div>
+    <div class="mapa"><iframe title="Mapa de la parafarmacia" loading="lazy" src="https://maps.google.com/maps?q=38.9898423,-0.4685777&z=17&output=embed"></iframe></div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Parafarmacia M. José Granero · Av. de Gandia, 36, El Genovés</span>
+    <nav aria-label="Legal">
+      <a class="edit" href="#">Aviso legal</a>
+      <a class="edit" href="#">Privacidad</a>
+      <a class="edit" href="#">Cookies</a>
+      <a class="edit" href="https://www.facebook.com/search/top?q=Parafarmacia%20Maria%20Jos%C3%A9%20Granero%20Genov%C3%A9s" target="_blank" rel="noopener">Facebook</a>
+    </nav>
+  </div>
+</footer>
+
+<section class="dueno">
+  <div class="wrap">
+    <span class="aviso">Esta franja no aparece en la web publicada</span>
+    <h2>Lo que esta web haría por la parafarmacia</h2>
+    <ul>
+      <li><b>Encargos y cestas por WhatsApp, directos.</b> El cliente escribe con el mensaje ya preparado ("quería encargar una cesta") y no hay comisiones ni intermediarios.</li>
+      <li><b>Salir mejor en Google y Maps</b> cuando alguien busca "parafarmacia en El Genovés". Hoy la ficha de Google tiene una sola reseña, y con una web cuidada y enlazada desde ahí se gana confianza.</li>
+      <li><b>Las cestas, como escaparate.</b> Es lo más especial de la tienda y la web las pone en primer plano, con fotos reales de las que ya tienen hechas.</li>
+      <li><b>Horario siempre claro.</b> Un aviso de "abierto ahora" o "abrimos a las 17:00" y el horario con el día de hoy marcado; se cambia en un minuto para festivos o vacaciones.</li>
+    </ul>
+    <button class="btn" type="button" id="resaltar">Resaltar datos a confirmar</button>
+  </div>
+</section>
+
+<div class="barra">
+  <a class="btn ghost" href="tel:+34962229228">Llamar</a>
+  <a class="btn wa" href="https://wa.me/34605843571?text=Hola%2C%20quer%C3%ADa%20consultar%20una%20cosa%20de%20la%20parafarmacia." data-wa>WhatsApp</a>
+</div>
+
+<script>
+(function(){
+  var H={1:[[540,840],[1020,1200]],2:[[540,840],[1020,1200]],3:[[540,840],[1020,1200]],4:[[540,840],[1020,1200]],5:[[540,840],[1020,1200]],6:[[540,840]],0:[]};
+  var dn=['domingo','lunes','martes','miércoles','jueves','viernes','sábado'];
+  function pad(n){return (n<10?'0':'')+n}
+  function fmt(m){return Math.floor(m/60)+':'+pad(m%60)}
+  function ahora(){
+    var p=new Intl.DateTimeFormat('en-GB',{timeZone:'Europe/Madrid',weekday:'short',hour:'2-digit',minute:'2-digit',hour12:false}).formatToParts(new Date());
+    var o={};p.forEach(function(x){o[x.type]=x.value});
+    var d={Sun:0,Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6}[o.weekday];
+    return {d:d,m:(parseInt(o.hour,10)%24)*60+parseInt(o.minute,10)};
+  }
+  function estado(){
+    var n=ahora(),t=H[n.d],txt,on=false,i;
+    for(i=0;i<t.length;i++){ if(n.m>=t[i][0]&&n.m<t[i][1]){on=true;txt='Abierto ahora · cerramos a las '+fmt(t[i][1]);break} }
+    if(!on){
+      for(i=0;i<t.length;i++){ if(n.m<t[i][0]){txt='Cerrado · abrimos hoy a las '+fmt(t[i][0]);break} }
+      if(!txt){
+        for(var k=1;k<=7;k++){var dd=(n.d+k)%7; if(H[dd].length){txt='Cerrado · abrimos '+(k===1?'mañana':'el '+dn[dd])+' a las '+fmt(H[dd][0][0]);break}}
+      }
+    }
+    ['estado1','estado2'].forEach(function(id){
+      var e=document.getElementById(id); if(!e)return;
+      e.className='estado '+(on?'on':'off'); e.querySelector('span').textContent=txt;
+    });
+    document.querySelectorAll('.horas tr').forEach(function(tr){tr.classList.toggle('hoy',+tr.dataset.d===n.d)});
+  }
+  estado(); setInterval(estado,60000);
+  document.getElementById('resaltar').addEventListener('click',function(){document.body.classList.toggle('ver-editables')});
+  document.querySelectorAll('[data-wa]').forEach(function(a){a.setAttribute('target','_blank');a.setAttribute('rel','noopener')});
+})();
+</script>
+</body>
+</html>
