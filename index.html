@@ -3,11 +3,30 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Parafarmacia M. José Granero · El Genovés</title>
+<title>Parafarmacia en El Genovés · M. José Granero</title>
 <meta name="description" content="Parafarmacia en El Genovés (Valencia): dermocosmética, bebé, herbolario, gafas, perfumería, cestas de regalo a medida y punto de Loterías y Apuestas del Estado. Avenida de Gandia, 36.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500;600;700&family=Anybody:wdth,wght@50..150,300..900&display=swap" rel="stylesheet">
+<link rel="canonical" href="https://www.parafarmaciamariajose.com/">
+<link rel="alternate" hreflang="es" href="https://www.parafarmaciamariajose.com/">
+<link rel="alternate" hreflang="ca" href="https://www.parafarmaciamariajose.com/va/">
+<link rel="alternate" hreflang="x-default" href="https://www.parafarmaciamariajose.com/">
+<meta name="theme-color" content="#0E078B">
+<link rel="icon" type="image/png" sizes="48x48" href="/img/favicon.png">
+<link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+<meta property="og:locale:alternate" content="ca_ES">
+<meta property="og:site_name" content="Parafarmacia M. José Granero">
+<meta property="og:title" content="Parafarmacia M. José Granero · El Genovés">
+<meta property="og:description" content="Dermocosmética, bebé, herbolario, cestas de regalo a medida y Loterías y Apuestas del Estado en El Genovés.">
+<meta property="og:url" content="https://www.parafarmaciamariajose.com/">
+<meta property="og:image" content="https://www.parafarmaciamariajose.com/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Pharmacy","name":"Parafarmacia M. José Granero","url":"https://www.parafarmaciamariajose.com/","image":"https://www.parafarmaciamariajose.com/img/og.jpg","logo":"https://www.parafarmaciamariajose.com/img/logo.png","telephone":"+34962229228","email":"mariajoseparafarmacia@gmail.com","address":{"@type":"PostalAddress","streetAddress":"Avinguda de Gandia, 36","postalCode":"46894","addressLocality":"El Genovés","addressRegion":"Valencia","addressCountry":"ES"},"geo":{"@type":"GeoCoordinates","latitude":38.9898423,"longitude":-0.4685777},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"14:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"17:00","closes":"20:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"09:00","closes":"14:00"}],"sameAs":["https://www.facebook.com/people/Parafarmacia-Maria-Jos%C3%A9-Granero/100050330210619/"]}</script>
+<link rel="preload" href="/fonts/Anybody-300-900-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/AlbertSans-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/fonts/fonts.css">
 <style>
 :root{
   --ultramar:#0E078B;      /* azul del logo */
@@ -42,10 +61,6 @@ a{color:inherit}
 .btn.lightghost{background:transparent;color:#fff;border-color:#fff}
 .btn svg{width:20px;height:20px;flex:none}
 
-/* editables */
-.edit{}
-body.ver-editables .edit{background:#fff36b;outline:2px dashed #b38b00;outline-offset:2px;color:#000}
-
 /* cabecera */
 header.top{position:sticky;top:0;z-index:30;background:var(--papel);border-bottom:2px solid var(--ultramar)}
 header.top .wrap{display:flex;align-items:center;gap:16px;min-height:64px}
@@ -53,8 +68,9 @@ header.top .logo img{height:42px;width:auto}
 header.top nav{margin-left:auto;display:none;gap:28px;font-weight:600}
 header.top nav a{text-decoration:none}
 header.top nav a:hover{text-decoration:underline;text-underline-offset:5px}
-header.top .btn{margin-left:auto;min-height:42px;padding:.5em 1em;font-size:.95rem}
-@media(min-width:900px){header.top nav{display:flex}header.top .btn{margin-left:0}}
+header.top .idioma{margin-left:auto;font-weight:700;font-size:.85rem;text-decoration:none;border:2px solid var(--ultramar);border-radius:4px;padding:.35em .6em;color:var(--ultramar)}
+header.top .btn{margin-left:0;min-height:42px;padding:.5em 1em;font-size:.95rem}
+@media(min-width:900px){header.top nav{display:flex}header.top .idioma{margin-left:0}}
 
 /* hero: la esquina */
 .hero{padding-top:clamp(24px,4vw,52px);position:relative;z-index:2}
@@ -203,6 +219,7 @@ header.top .btn{margin-left:auto;min-height:42px;padding:.5em 1em;font-size:.95r
 .donde .estado{margin-bottom:16px;border-color:#fff;color:var(--tinta)}
 .donde .acc{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
 .mapa{border:4px solid #fff;min-height:320px;background:#223}
+.mapa-ph{display:grid;gap:14px;align-content:center;justify-items:start;min-height:inherit;padding:28px;font-size:.98rem}
 .mapa iframe{width:100%;height:100%;min-height:320px;border:0;display:block}
 @media(min-width:900px){.donde .wrap{grid-template-columns:1fr 1fr;gap:64px;align-items:start}.mapa{grid-column:2;grid-row:1/3;min-height:480px}}
 
@@ -211,13 +228,6 @@ footer{padding:36px 0 28px;font-size:.92rem}
 footer .wrap{display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:space-between;align-items:center}
 footer nav{display:flex;flex-wrap:wrap;gap:8px 20px}
 footer a{text-underline-offset:3px}
-
-/* franja dueño */
-.dueno{background:#fff36b;color:#222;border-top:6px dashed #222;padding:40px 0 56px}
-.dueno .aviso{font-weight:800;font-size:.85rem;background:#222;color:#fff36b;display:inline-block;padding:.25em .7em;margin-bottom:18px}
-.dueno h2{font-family:var(--f-display);font-variation-settings:"wdth" 110;font-size:clamp(1.6rem,5vw,2.6rem);margin-bottom:18px}
-.dueno ul{display:grid;gap:12px;padding-left:1.2em;max-width:70ch}
-.dueno .btn{margin-top:26px;background:#222;border-color:#222}
 
 /* barra móvil */
 .barra{position:fixed;left:0;right:0;bottom:0;z-index:40;display:grid;grid-template-columns:1fr 1.4fr;gap:8px;padding:8px 10px calc(8px + env(safe-area-inset-bottom));background:var(--papel);border-top:2px solid var(--ultramar)}
@@ -238,6 +248,7 @@ footer a{text-underline-offset:3px}
       <a href="#loteria">Lotería</a>
       <a href="#donde">Horario</a>
     </nav>
+    <a class="idioma" href="/va/" hreflang="ca" lang="ca-ES-valencia" title="Veure en valencià">VA</a>
     <a class="btn wa" href="https://wa.me/34605843571?text=Hola%2C%20quer%C3%ADa%20consultar%20una%20cosa%20de%20la%20parafarmacia." data-wa>Escribir por WhatsApp</a>
   </div>
 </header>
@@ -269,7 +280,7 @@ footer a{text-underline-offset:3px}
       <div><b>Cestas a medida</b>Para nacimientos, bautizos y Navidad</div>
       <div><b>Encargos</b>Cualquier producto, te avisamos al llegar</div>
       <div><b>Lotería y apuestas</b>Punto oficial en la misma tienda</div>
-      <div><b>+550 en Facebook</b>La parafarmacia de Genovés</div>
+      <div><b>Atención cercana</b>Te asesoramos con calma, sin prisas</div>
     </div>
   </div>
 </div>
@@ -343,7 +354,7 @@ footer a{text-underline-offset:3px}
   <div class="wrap">
     <div class="cab">
       <h2 class="disp">Así es por dentro</h2>
-      <a class="btn ghost edit" href="https://www.facebook.com/search/top?q=Parafarmacia%20Maria%20Jos%C3%A9%20Granero%20Genov%C3%A9s" target="_blank" rel="noopener">Síguenos en Facebook</a>
+      <a class="btn ghost" href="https://www.facebook.com/people/Parafarmacia-Maria-Jos%C3%A9-Granero/100050330210619/" target="_blank" rel="noopener">Síguenos en Facebook</a>
     </div>
     <div class="collage">
       <img src="img/fachada.jpg" alt="Escaparate de la parafarmacia" loading="lazy">
@@ -362,7 +373,7 @@ footer a{text-underline-offset:3px}
     <div>
       <div class="estado" id="estado2" role="status"><i></i><span>Comprobando horario…</span></div>
       <h2 class="disp">Avenida de Gandia, 36<small>46894 El Genovés (Valencia) · 962 22 92 28</small></h2>
-      <table class="horas edit" aria-label="Horario">
+      <table class="horas" aria-label="Horario">
         <tbody>
           <tr data-d="1"><th>Lunes</th><td>9:00–14:00 y 17:00–20:00</td></tr>
           <tr data-d="2"><th>Martes</th><td>9:00–14:00 y 17:00–20:00</td></tr>
@@ -378,7 +389,13 @@ footer a{text-underline-offset:3px}
         <a class="btn lightghost" href="tel:+34962229228">Llamar</a>
       </div>
     </div>
-    <div class="mapa"><iframe title="Mapa de la parafarmacia" loading="lazy" src="https://maps.google.com/maps?q=38.9898423,-0.4685777&z=17&output=embed"></iframe></div>
+    <div class="mapa" id="mapa">
+      <div class="mapa-ph">
+        <p>El mapa lo sirve Google. Al cargarlo, Google puede guardar cookies en tu navegador.</p>
+        <button class="btn light" type="button" id="verMapa">Ver el mapa aquí</button>
+        <a class="btn lightghost" href="https://www.google.com/maps/search/?api=1&query=38.9898423,-0.4685777" target="_blank" rel="noopener">Abrir en Google Maps</a>
+      </div>
+    </div>
   </div>
 </section>
 </main>
@@ -387,27 +404,13 @@ footer a{text-underline-offset:3px}
   <div class="wrap">
     <span>Parafarmacia M. José Granero · Av. de Gandia, 36, El Genovés</span>
     <nav aria-label="Legal">
-      <a class="edit" href="#">Aviso legal</a>
-      <a class="edit" href="#">Privacidad</a>
-      <a class="edit" href="#">Cookies</a>
-      <a class="edit" href="https://www.facebook.com/search/top?q=Parafarmacia%20Maria%20Jos%C3%A9%20Granero%20Genov%C3%A9s" target="_blank" rel="noopener">Facebook</a>
+      <a href="/aviso-legal/">Aviso legal</a>
+      <a href="/privacidad/">Privacidad</a>
+      <a href="/cookies/">Cookies</a>
+      <a href="https://www.facebook.com/people/Parafarmacia-Maria-Jos%C3%A9-Granero/100050330210619/" target="_blank" rel="noopener">Facebook</a>
     </nav>
   </div>
 </footer>
-
-<section class="dueno">
-  <div class="wrap">
-    <span class="aviso">Esta franja no aparece en la web publicada</span>
-    <h2>Lo que esta web haría por la parafarmacia</h2>
-    <ul>
-      <li><b>Encargos y cestas por WhatsApp, directos.</b> El cliente escribe con el mensaje ya preparado ("quería encargar una cesta") y no hay comisiones ni intermediarios.</li>
-      <li><b>Salir mejor en Google y Maps</b> cuando alguien busca "parafarmacia en El Genovés". Hoy la ficha de Google tiene una sola reseña, y con una web cuidada y enlazada desde ahí se gana confianza.</li>
-      <li><b>Las cestas, como escaparate.</b> Es lo más especial de la tienda y la web las pone en primer plano, con fotos reales de las que ya tienen hechas.</li>
-      <li><b>Horario siempre claro.</b> Un aviso de "abierto ahora" o "abrimos a las 17:00" y el horario con el día de hoy marcado; se cambia en un minuto para festivos o vacaciones.</li>
-    </ul>
-    <button class="btn" type="button" id="resaltar">Resaltar datos a confirmar</button>
-  </div>
-</section>
 
 <div class="barra">
   <a class="btn ghost" href="tel:+34962229228">Llamar</a>
@@ -442,7 +445,8 @@ footer a{text-underline-offset:3px}
     document.querySelectorAll('.horas tr').forEach(function(tr){tr.classList.toggle('hoy',+tr.dataset.d===n.d)});
   }
   estado(); setInterval(estado,60000);
-  document.getElementById('resaltar').addEventListener('click',function(){document.body.classList.toggle('ver-editables')});
+  var vm=document.getElementById('verMapa');
+  if(vm)vm.addEventListener('click',function(){var m=document.getElementById('mapa');m.innerHTML='<iframe title="Mapa de la parafarmacia" src="https://maps.google.com/maps?q=38.9898423,-0.4685777&z=17&output=embed"></iframe>'});
   document.querySelectorAll('[data-wa]').forEach(function(a){a.setAttribute('target','_blank');a.setAttribute('rel','noopener')});
 })();
 </script>
