@@ -10,34 +10,4 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://www.parafarmaciamariajose.com/"/>
     <xhtml:link rel="alternate" hreflang="ca" href="https://www.parafarmaciamariajose.com/va/"/>
   </url>
-  <url>
-    <loc>https://www.parafarmaciamariajose.com/aviso-legal/</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.parafarmaciamariajose.com/aviso-legal/"/>
-    <xhtml:link rel="alternate" hreflang="ca" href="https://www.parafarmaciamariajose.com/va/avis-legal/"/>
-  </url>
-  <url>
-    <loc>https://www.parafarmaciamariajose.com/va/avis-legal/</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.parafarmaciamariajose.com/aviso-legal/"/>
-    <xhtml:link rel="alternate" hreflang="ca" href="https://www.parafarmaciamariajose.com/va/avis-legal/"/>
-  </url>
-  <url>
-    <loc>https://www.parafarmaciamariajose.com/privacidad/</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.parafarmaciamariajose.com/privacidad/"/>
-    <xhtml:link rel="alternate" hreflang="ca" href="https://www.parafarmaciamariajose.com/va/privacitat/"/>
-  </url>
-  <url>
-    <loc>https://www.parafarmaciamariajose.com/va/privacitat/</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.parafarmaciamariajose.com/privacidad/"/>
-    <xhtml:link rel="alternate" hreflang="ca" href="https://www.parafarmaciamariajose.com/va/privacitat/"/>
-  </url>
-  <url>
-    <loc>https://www.parafarmaciamariajose.com/cookies/</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.parafarmaciamariajose.com/cookies/"/>
-    <xhtml:link rel="alternate" hreflang="ca" href="https://www.parafarmaciamariajose.com/va/galetes/"/>
-  </url>
-  <url>
-    <loc>https://www.parafarmaciamariajose.com/va/galetes/</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.parafarmaciamariajose.com/cookies/"/>
-    <xhtml:link rel="alternate" hreflang="ca" href="https://www.parafarmaciamariajose.com/va/galetes/"/>
-  </url>
 </urlset>
